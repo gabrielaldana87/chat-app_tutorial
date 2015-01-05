@@ -7,7 +7,7 @@ Creating and hosting your own Chat-App!
 
 **Toolbox**
 
-`git/github`
+`git/github`/
 `terminal`
 `google chrome`
 `javascript`
