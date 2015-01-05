@@ -19,5 +19,5 @@ Creating and hosting your own Chat-App!
 (http://nodejs.org/download/)
 [`wscat`]
 (https://github.com/einaros/ws)
-[`atom`](https://atom.io/) ...or ['sublime text'](http://www.sublimetext.com/2)
+[`atom`](https://atom.io/) or [`sublime text`](http://www.sublimetext.com/2)
 
