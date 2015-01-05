@@ -5,7 +5,7 @@ Creating and hosting your own Chat-App!
 ###Before you get started...
 ####You will need the following Tools
 
-`Toolbox`
+**Toolbox**
 
 `git/github`
 `terminal`
