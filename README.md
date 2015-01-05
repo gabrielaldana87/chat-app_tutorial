@@ -5,11 +5,12 @@ Creating and hosting your own Chat-App!
 ###Before you get started...
 ####You will need the following Tools
 ```
-**Toolbox**
-console.log("Hi, how are you?")
-var counter = 0
-while (counter < 5) {
-  console.log("I'm fine, how are you?")
-  counter ++
-}
+`Toolbox`
+
+`git/github`
+`terminal`
+`google chrome`
+`javascript`
+`node.js`
+
 ```
