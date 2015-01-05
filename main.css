@@ -1,0 +1,29 @@
+
+p{
+  width:70%;
+}
+
+nav{
+  width:30%;
+  float:left;
+}
+
+.nav_li1{
+  background-color:red;
+  padding:10px 10px 10px 10px;
+  list-style:none;
+  margin: 5px 5px 5px 5px;
+  font-family: Calibri;
+}
+a{
+  color:white;
+}
+.primary-nav{
+  background-color:white;
+  padding: 10px 10px 10px 10px;
+}
+.ul{
+  padding: 0px 0px 0px 0px;
+  list-style:none;
+  margin-left:0px;
+}
