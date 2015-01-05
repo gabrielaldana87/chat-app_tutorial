@@ -9,7 +9,8 @@ Creating and hosting your own Chat-App!
 
 [`git/github`]
 (https://github.com/)
-`terminal`
+[`terminal`]
+(https://github.com/0nn0/terminal-mac-cheatsheet/wiki/Terminal-Cheatsheet-for-Mac-(-basics-))
 `google chrome`
 `javascript`
 `node.js`
