@@ -17,4 +17,6 @@ Creating and hosting your own Chat-App!
 (http://www.codecademy.com/en/tracks/javascript)
 [`node.js`]
 (http://nodejs.org/download/)
+[`wscat`]
+(https://github.com/einaros/ws)
 
