@@ -330,6 +330,39 @@
   <h4>The second set of commands pushes to github every time you want to commit changes:</h4>
   <p></p>
   <img src="gitub_3.png">
+   <h1><a name="digitalocean" class="nostyle">Digital Ocean</a></h1>
++
++   <p>
++    Once all changes have been commited to the github repository the last and final step will be to connect to Digital Ocean and 
++    host the files using an http-server. If you don't already have one click <a href="https://cloud.digitalocean.com/registrations/new">here</a> to register for a new Digital Ocean acocunt.</p>
++
++    <p>The following steps will need to be performed</p>
++    <ul>
++      <li>Connect to your server</li>
++      <li>Clone your github repo</li>
++      <li>Install the http-server using npm</li>
++      <li>Start the http-server</li>
++    </ul>
++
++    <p>To connect to your server open a local command prompt and login using the following:</p>
++    <ul>
++    <li>ssh root@[your-name].[your-url].nyc</li>
++    <li>enter in your password</li>
++      </ul>
++  </p>
++   <p></p>
++  <p>Clone your github repo using the following commands:</p>
++  <ul>
++    <li>git clone [your-github-repo-address]</li>
++    <li>cd [your-repo-name]</li>
++  </ul>
++      <p></p>
++      <p>Install and activate the http-server using npm by typing the following command:</p>
++  <ul>
++    <li>npm install -g http-server</li>
++    <li>http-server</li>
++  </ul>
++  <p>You have now completed the tutorial</p>
   <br><br><br>
 
 
