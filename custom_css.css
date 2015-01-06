@@ -1,0 +1,17 @@
+body {
+  margin-top: 55px;
+}
+
+.nostyle {
+  text-decoration: none !important;
+  color: black;
+  padding-top: 50px;
+}
+
+a:hover.nostyle  {
+  color: black;
+}
+
+.jumbotron {
+  padding: 20 60 60 20;
+}
