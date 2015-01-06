@@ -57,3 +57,28 @@ ws.on("message", function(data)
 {
   console.log(data);
 })
+
+
+Hosting your app locally:
+
+Now that you have created both a client.js file and a server.js, you can start communicating with other clients.
+
+As an example of the chat app capabilities of integrating wscat in your website, now that you have both server and client
+files, you can test locally.
+
+We do so by running the following command on your terminal:
+
+
+In a new terminal window type in the following command to run your client.
+
+Open a second terminal window and open up another client.
+
+Start chatting with your clients!
+
+Creating a git repository for your work:
+
+In your github page, create a new repository by right hand-clicking "new repository" on the drop-down box next to your name.
+
+Name your new repository and include a description.
+
+Click "Submit" and follow the instructions indicated on github to push up your repository to github.
