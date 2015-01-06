@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebSockets Demo</title>
+
+
+<style>
+
+
+</style>
+</head>
+<body>
+
+
+
+<h1>Creating A Basic Chat App Using Web Sockets</h1>
+
+<h3>Prerequisites</h3>
+<p>This tutorial has been developed to provide an overview of creating a basic Chat App using Web Sockets.</p>
+
+<p>The following github repository has also been created to provide code snippets and links to all supporting\required software: <a href = "gabrielaldana87/chat-app_tutorial">github repo</a></p>
+
+<h3>Introduction to WebSockets</h3>
+
+<p>Web Sockets is the next-generation of bidirectional communication for web applications and in now on it’s way to replace HTTP for realtime communication between clients and servers.</p>
+
+<p>Some of the benefits of using WebSockets are:</p>
+<ul>
+  <li>Offers much lower latency and requires less bandwidth compared to the overhead included with HTTP request\response headers. (1)</li>
+  <li>Persistent full-duplex connections between client and server</li>
+  <li>Operates through a single socket over the web</li>
+</ul>
+
+<p>Although the initial connection is initiated using the HTTP protocol it is subsequently upgraded to the WebSockets protocol during their initial handshake and both parties and begin sending data at any time. </p>
+
+<h3>Building The Client</h3>
+
+<p>We will be writing a client file using js to be able to communicate with the server.</p>
+
+<p>In order to communicate with the server, we will need a few basic functonalities.</p>
+
+<ul>
+  <li>Opening connection</li>
+  <li>Sending messages</li>
+  <li>Handling when messages come in</li>
+</ul>
+
+<p>We will have to reference websockets within our client file, which we do so by introducing the following line.</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">var</span> ws = <span style="color: #0000aa">new</span> WebSocket(<span style="color: #aa5500">&quot;ws://localhost:3000&quot;</span>);
+</pre></div>
+
+<h4>Opening a Connection</h4>
+<p>First our client.js file needs to handle the event of opening a connection with the server.</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"> ws.on(<span style="color: #aa5500">&quot;open&quot;</span>,<span style="color: #0000aa">function</span>()
+{
+  console.log(<span style="color: #aa5500">&quot;Connected to server.&quot;</span>);
+});
+</pre></div>
+
+<h4>Sending a Message</h4>
+<p>As our connection is realized, we console.log a message is also included which will provide the client with some notificaition they are connected.</p>
+
+<p>We can likewise broadcast to our server that we have established a connection and can do so by using the ws.send method.</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">ws.on(<span style="color: #aa5500">&quot;open&quot;</span>,<span style="color: #0000aa">function</span>()
+{
+  console.log(<span style="color: #aa5500">&quot;Connected to server.&quot;</span>);
+  ws.send(<span style="color: #aa5500">&quot;client connected!&quot;</span>);
+});
+</pre></div>
+
+<h4>Handling Incoming Messages</h4>
+<p>Our last event-handler will listen for messages being emitted from the server.</p>
+
+<p>We do so by introducing ws.on("message").  This eventListener will also need to console.log data emitted from the server in order to see it in the console.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">ws.on(<span style="color: #aa5500">&quot;message&quot;</span>, <span style="color: #0000aa">function</span>(data)
+{
+  console.log(data);
+})
+</pre></div>
+<p></p>
+<a href="https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/client_3.js">Click here to download the full client.js file</a>
+
+<h3>Building the Server</h3>
+
+<p>We will now be writing a server file using js to be able to communicate with the server.</p>
+
+<p>In order to manage client connects, we will need a few basic functonalities.</p>
+
+<ul>
+  <li>CLient connections</li>
+  <li>Request user provide a username</li>
+  <li>Message relay</li>
+</ul>
+
+<p>Now it's time to move onto creating the server side code.  The code example below contains all the required functionality which we can break down in sequence. </p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">var</span> WebSocketServer = require(<span style="color: #aa5500">&quot;ws&quot;</span>).Server;
+<span style="color: #0000aa">var</span> server = <span style="color: #0000aa">new</span> WebSocketServer({port: <span style="color: #009999">3000</span>});
+
+<span style="color: #0000aa">var</span> userDb = [];
+
+server.on(<span style="color: #aa5500">&quot;connection&quot;</span>, <span style="color: #0000aa">function</span>(obj){
+
+  <span style="color: #0000aa">var</span> user = {userName: <span style="color: #aa5500">&quot;&quot;</span>, userObj: obj};
+  userDb.push(user);
+
+  user.userObj.send(<span style="color: #aa5500">&quot;Please type in your username and press enter&quot;</span>) <span style="color: #aaaaaa; font-style: italic">// ask for a username</span>
+
+  user.userObj.on(<span style="color: #aa5500">&quot;message&quot;</span>, <span style="color: #0000aa">function</span>(message) {
+
+    <span style="color: #0000aa">if</span> (user.userName === <span style="color: #aa5500">&quot;&quot;</span>) {
+      user.userName = message.trim();
+    }
+
+    <span style="color: #0000aa">else</span> {
+
+      <span style="color: #0000aa">var</span> msg = message.trim(<span style="color: #aa5500">&quot;\n&quot;</span>);
+
+      userDb.forEach(<span style="color: #0000aa">function</span>(object) {
+        <span style="color: #0000aa">if</span> (object.userObj !== obj) {
+          object.userObj.send(user.userName + <span style="color: #aa5500">&quot;: &quot;</span> + msg); <span style="color: #aaaaaa; font-style: italic">// send msg with your username</span>
+        }
+      });
+    }
+  });
+
+  user.userObj.on(<span style="color: #aa5500">&quot;close&quot;</span>, <span style="color: #0000aa">function</span>() {
+    <span style="color: #0000aa">var</span> x = userDb.indexOf(user.userObj);
+    userDb.splice(x,<span style="color: #009999">1</span>);
+    user.userObj.close();
+  });
+});
+</pre></div>
+
+
+
+<p>Creating a server first requires that we create an object that instantiates an instance of the WebSocket API server and configures it to listen on a specific port</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic">//Loads the WebSocket API server object</span>
+<span style="color: #0000aa">var</span> WebSocketServer = require(<span style="color: #aa5500">&quot;ws&quot;</span>).Server;
+<span style="color: #aaaaaa; font-style: italic">//Instantiates an instance of the WebSocket server object</span>
+<span style="color: #0000aa">var</span> server = <span style="color: #0000aa">new</span> WebSocketServer({port: <span style="color: #009999">3000</span>});
+</pre></div>
+
+<h4>Client Connections</h4>
+<p>The server object has a method called "on", that acts as an event listener and executes an anonymous function when a new "connection" is detected. It is exectued only the first time a new client connects.  The function requires a parameter that has been defined here as "obj" and represents the recently connected user.</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">server.on(<span style="color: #aa5500">&quot;connection&quot;</span>, <span style="color: #0000aa">function</span>(obj){
+</pre></div>
+
+<h4>Request user provide a username</h4>
+<p>We then create an empty userDB array which will be used to keep track of all connections.  An new user variable is then created to add additional properties to the existing user obj which is then pushed into the userDB array.</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">var</span> user = {userName: <span style="color: #aa5500">&quot;&quot;</span>,userObj: obj};
+userDb.push(user);
+</pre></div>
+<h4>Message Relay</h4>
+<p>The next thing we do is send a new message to the client and request that they type in a user name. An if\else statement is used to determine if thier response message contains actual text and if so is trimmed, added to thier userName property and a new message sent to all connected users.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  user.userObj.send(<span style="color: #aa5500">&quot;Please type in your username and press enter&quot;</span>) <span style="color: #aaaaaa; font-style: italic">// ask for a username</span>
+
+  user.userObj.on(<span style="color: #aa5500">&quot;message&quot;</span>, <span style="color: #0000aa">function</span>(message) {
+
+    <span style="color: #0000aa">if</span> (user.userName === <span style="color: #aa5500">&quot;&quot;</span>) {
+      user.userName = message.trim();
+    }
+
+    <span style="color: #0000aa">else</span> {
+
+      <span style="color: #0000aa">var</span> msg = message.trim(<span style="color: #aa5500">&quot;\n&quot;</span>);
+
+      userDb.forEach(<span style="color: #0000aa">function</span>(object) {
+        <span style="color: #0000aa">if</span> (object.userObj !== obj) {
+          object.userObj.send(user.userName + <span style="color: #aa5500">&quot;: &quot;</span> + msg); <span style="color: #aaaaaa; font-style: italic">// send msg with your username</span>
+        }
+      });
+    }
+  });
+</pre></div>
+<h4>Closing Connections</h4>
+<p>Lastly we add some code to deal with "close" events which is triggered when a user disconnects from the server. The code below uses the splice methond on the userDB array to remove the client from the array</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">   user.userObj.on(<span style="color: #aa5500">&quot;close&quot;</span>, <span style="color: #0000aa">function</span>() {
+    <span style="color: #0000aa">var</span> x = userDb.indexOf(user.userObj);
+    userDb.splice(x,<span style="color: #009999">1</span>);
+    user.userObj.close();
+  });
+</pre></div>
+<p></p>
+<a href="https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/server_6.js">Click here to download the full server.js file</a>
+
+
+
+<h3>References:</h3>
+
+
+<footer>
+1) http://www.websocket.org/quantum.html
+</footer>
+
+</body>
+</html>
