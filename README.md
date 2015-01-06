@@ -23,10 +23,12 @@ Creating and hosting your own Chat-App!
 ####Introduction to WebSockets
 
 ####Building the Client
-
-####Building the Server
 [server code]
 (https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/server_6.js)
+
+####Building the Server
+[Client code]
+(https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/client_3.js)
 
 ####Testing your App Locally
 
