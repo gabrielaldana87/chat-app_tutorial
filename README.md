@@ -18,18 +18,25 @@ Creating and hosting your own Chat-App!
 [`atom`](https://atom.io/) or [`sublime text`](http://www.sublimetext.com/2)
 
 ---
-###Prerequisites
+####Prerequisites
 
-###Introduction to WebSockets
+####Introduction to WebSockets
 
-###Building the Client
-
-###Building the Server
+####Building the Client
 [server code]
 (https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/server_6.js)
 
-###Testing your App Locally
+####Building the Server
+[Client code]
+(https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/client_3.js)
 
-###Creating a git Repository for your Work
+####Testing your App Locally
+![Image of Client Terminal]
+(https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/client.png)
 
-###Hosting on Digital Ocean
+![Image of Server Terminal]
+(https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/server.png)
+
+####Creating a git Repository for your Work
+
+####Hosting on Digital Ocean
