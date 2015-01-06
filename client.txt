@@ -1,0 +1,59 @@
+We will be writing a client file using js to be able to communicate with the server.
+
+In order to communicate with the server, we will need a few basic functonalities.
+
+Opening connection
+Sending messages
+Handling when messages come in
+
+We will have to reference websockets within our client file, which we do so by introducing the following two lines.
+
+As will be discussed in the server.js file; our client JavaScript file (which we will reference as client.js)
+needs to first connect to the server.
+
+First our client.js file needs to handle the event of opening a connection with the server.
+
+ ws.on("open",function()
+{
+  console.log("Connected to server.");
+});
+
+As our connection is realized, we console.log a message indicating this connection.
+
+We can likewise broadcast to our server that we have established a connection.
+
+We do so by using the ws.send method.
+
+var ws = new WebSocket("ws://localhost:3000");
+
+ws.on("open",function()
+{
+  console.log("Connected to server.");
+  ws.send("client connected!");
+});
+
+Our last event-handler will listen for messages being emitted from the server.
+
+We do so by introducing ws.on("message")
+
+This eventListener should console.log data emitted from the server.
+
+ws.on("message", function(data)
+{
+  console.log(data);
+})
+
+Our completed client.js should look as follows:
+
+var ws = new WebSocket("ws://localhost:3000");
+
+ws.on("open",function()
+{
+  console.log("Connected to server.");
+  ws.send("client connected!");
+});
+
+ws.on("message", function(data)
+{
+  console.log(data);
+})

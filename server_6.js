@@ -23,9 +23,12 @@ server.on("connection", function(obj){
       userDb.forEach(function(object) {
         if (object.userObj !== obj) {
           object.userObj.send(user.userName + ": " + msg); // send msg with your username
+
         }
       });
+
     }
+    console.log(user.userName + ": " + msg);//print message from client to server
   });
 
   user.userObj.on("close", function() {
