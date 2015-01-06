@@ -1,271 +1,179 @@
 <html>
 
-  <head>
+<head>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bootstrap.min.css">
+
+  <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="custom_css.css">
 
   <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="container">
-      <div class="row clearfix">
-        <div class="col-md-1 column">
-        </div>
-        <div class="col-md-10 column">
-          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Peach Tutorial Content</a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li>
-                  <a href="#prereqs">Prerequisites</a>
-                </li>
-                <li>
-                  <a href="#websockets">Intro Websockets</a>
-                </li>
-                <li>
-                  <a href="#client">Building the client</a>
-                </li>
-                <li>
-                  <a href="#server">Building the server</a>
-                </li>
-                <li>
-                  <a href="#testing">Testing your app</a>
-                </li>
-                <li>
-                  <a href="#git">Using GIT</a>
-                </li>
-                <!-- <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">Action</a>
-                    </li>
-                    <li>
-                      <a href="#">Another action</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                      <a href="#">One more separated link</a>
-                    </li>
-                  </ul>
-                </li> -->
-              </ul>
-              <!-- <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" />
-                </div> <button type="submit" class="btn btn-default">Submit</button>
-              </form> -->
-              <ul class="nav navbar-nav navbar-right">
-                <!-- <li>
-                  <a href="#">Link</a>
-                </li> -->
-                <!-- <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="#">Action</a>
-                    </li>
-                    <li>
-                      <a href="#">Another action</a>
-                    </li>
-                    <li>
-                      <a href="#">Something else here</a>
-                    </li>
-                    <li class="divider">
-                    </li>
-                    <li>
-                      <a href="#">Separated link</a>
-                    </li>
-                  </ul>
-                </li> -->
-              </ul>
-            </div>
-
-          </nav>
-        </div>
-        <div class="col-md-1 column">
-        </div>
+  <div class="container">
+    <div class="row clearfix">
+      <div class="col-md-1 column">
       </div>
-      <div class="row clearfix">
-        <div class="col-md-1 column">
-        </div>
-        <div class="col-md-10 column">
-          <div class="jumbotron">
-            <h1>
-              Welcome to the Chat App Tutorial
-            </h1>
-            <p>
-              With this tutorial you will be able to build your own chat application in JavaScript from scratch. Scroll down to get started...
-            </p>
+      <div class="col-md-10 column">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
+            <a class="navbar-brand" href="#"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Peach Tutorial Content</a>
           </div>
-        </div>
-        <div class="col-md-1 column">
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#prereqs">Prerequisites</a>
+              </li>
+              <li>
+                <a href="#websockets">Intro Websockets</a>
+              </li>
+              <li>
+                <a href="#client">Building the client</a>
+              </li>
+              <li>
+                <a href="#server">Building the server</a>
+              </li>
+              <li>
+                <a href="#testing">Testing your app</a>
+              </li>
+              <li>
+                <a href="#git">Using git/gitHub</a>
+              </li>
+              <li>
+                <a href="#digitalocean">Hosting</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+          </div>
+
+        </nav>
+      </div>
+      <div class="col-md-1 column">
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-md-1 column">
+      </div>
+      <div class="col-md-10 column">
+        <div class="jumbotron">
+          <h1>
+            Welcome to the Chat App Tutorial
+          </h1>
+          <p>
+            With this tutorial you will be able to build your own chat application in JavaScript from scratch. Scroll down to get started...
+          </p>
         </div>
       </div>
-      <div class="row clearfix">
-        <div class="col-md-1 column">
-        </div>
-        <div class="col-md-10 column">
+      <div class="col-md-1 column">
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-md-1 column">
+      </div>
+      <div class="col-md-10 column">
 
-          <h1>Creating A Basic Chat App Using Web Sockets</h1>
+        <h1>Creating A Basic Chat App Using Web Sockets</h1>
 
-          <h3><a name="prereqs" class="nostyle">Prerequisites</a></h3>
-          <p>This tutorial has been developed to provide an overview of creating a basic Chat App using Web Sockets.</p>
+        <h3><a name="prereqs" class="nostyle">Prerequisites</a></h3>
+        <p>This tutorial has been developed to provide an overview of creating a basic Chat App using Web Sockets.</p>
 
-          <p>The following github repository has also been created to provide code snippets and links to all supporting\required software: <a href = "gabrielaldana87/chat-app_tutorial">github repo</a></p>
+        <p>The following github repository has also been created to provide code snippets and links to all supporting\required software: <a href = "gabrielaldana87/chat-app_tutorial">github repo</a></p>
 
-          <h3><a name="websockets" class="nostyle">Introduction to WebSockets</a></h3>
+        <h3><a name="websockets" class="nostyle">Introduction to WebSockets</a></h3>
 
-          <p>Web Sockets is the next-generation of bidirectional communication for web applications and in now on it’s way to replace HTTP for realtime communication between clients and servers.</p>
+        <p>Web Sockets is the next-generation of bidirectional communication for web applications and in now on it’s way to replace HTTP for realtime communication between clients and servers.</p>
 
-          <p>Some of the benefits of using WebSockets are:</p>
-          <ul>
-            <li>Offers much lower latency and requires less bandwidth compared to the overhead included with HTTP request\response headers. (1)</li>
-            <li>Persistent full-duplex connections between client and server</li>
-            <li>Operates through a single socket over the web</li>
-          </ul>
+        <p>Some of the benefits of using WebSockets are:</p>
+        <ul>
+          <li>Offers much lower latency and requires less bandwidth compared to the overhead included with HTTP request\response headers. (1)</li>
+          <li>Persistent full-duplex connections between client and server</li>
+          <li>Operates through a single socket over the web</li>
+        </ul>
 
-          <p>Although the initial connection is initiated using the HTTP protocol it is subsequently upgraded to the WebSockets protocol during their initial handshake and both parties and begin sending data at any time. </p>
+        <p>Although the initial connection is initiated using the HTTP protocol it is subsequently upgraded to the WebSockets protocol during their initial handshake and both parties and begin sending data at any time. </p>
 
-          <h3><a name="client" class="nostyle">Building The Client</a></h3>
+        <h3><a name="client" class="nostyle">Building The Client</a></h3>
 
-          <p>We will be writing a client file using js to be able to communicate with the server.</p>
+        <p>We will be writing a client file using js to be able to communicate with the server.</p>
 
-          <p>In order to communicate with the server, we will need a few basic functonalities.</p>
+        <p>In order to communicate with the server, we will need a few basic functonalities.</p>
 
-          <ul>
-            <li>Opening connection</li>
-            <li>Sending messages</li>
-            <li>Handling when messages come in</li>
-          </ul>
+        <ul>
+          <li>Opening connection</li>
+          <li>Sending messages</li>
+          <li>Handling when messages come in</li>
+        </ul>
 
-          <p>We will have to reference websockets within our client file, which we do so by introducing the following line.</p>
-          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">var</span> ws = <span style="color: #0000aa">new</span> WebSocket(<span style="color: #aa5500">&quot;ws://localhost:3000&quot;</span>);
-        </pre></div>
-
-        <h4>Opening a Connection</h4>
-        <p>First our client.js file needs to handle the event of opening a connection with the server.</p>
-        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"> ws.on(<span style="color: #aa5500">&quot;open&quot;</span>,<span style="color: #0000aa">function</span>()
-        {
-          console.log(<span style="color: #aa5500">&quot;Connected to server.&quot;</span>);
-        });
+        <p>We will have to reference websockets within our client file, which we do so by introducing the following line.</p>
+        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">var</span> ws = <span style="color: #0000aa">new</span> WebSocket(<span style="color: #aa5500">&quot;ws://localhost:3000&quot;</span>);
       </pre></div>
 
-      <h4>Sending a Message</h4>
-      <p>As our connection is realized, we console.log a message is also included which will provide the client with some notificaition they are connected.</p>
-
-      <p>We can likewise broadcast to our server that we have established a connection and can do so by using the ws.send method.</p>
-      <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">ws.on(<span style="color: #aa5500">&quot;open&quot;</span>,<span style="color: #0000aa">function</span>()
+      <h4>Opening a Connection</h4>
+      <p>First our client.js file needs to handle the event of opening a connection with the server.</p>
+      <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"> ws.on(<span style="color: #aa5500">&quot;open&quot;</span>,<span style="color: #0000aa">function</span>()
       {
         console.log(<span style="color: #aa5500">&quot;Connected to server.&quot;</span>);
-        ws.send(<span style="color: #aa5500">&quot;client connected!&quot;</span>);
       });
     </pre></div>
 
-    <h4>Handling Incoming Messages</h4>
-    <p>Our last event-handler will listen for messages being emitted from the server.</p>
+    <h4>Sending a Message</h4>
+    <p>As our connection is realized, we console.log a message is also included which will provide the client with some notificaition they are connected.</p>
 
-    <p>We do so by introducing ws.on("message").  This eventListener will also need to console.log data emitted from the server in order to see it in the console.</p>
-
-    <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">ws.on(<span style="color: #aa5500">&quot;message&quot;</span>, <span style="color: #0000aa">function</span>(data)
+    <p>We can likewise broadcast to our server that we have established a connection and can do so by using the ws.send method.</p>
+    <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">ws.on(<span style="color: #aa5500">&quot;open&quot;</span>,<span style="color: #0000aa">function</span>()
     {
-      console.log(data);
-    })
-  </pre></div>
-  <p></p>
-  <a href="https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/client_3.js">Click here to download the full client.js file</a>
-
-  <h3><a name="server" class="nostyle">Building the Server</a></h3>
-
-  <p>We will now be writing a server file using js to be able to communicate with the server.</p>
-
-  <p>In order to manage client connects, we will need a few basic functonalities.</p>
-
-  <ul>
-    <li>CLient connections</li>
-    <li>Request user provide a username</li>
-    <li>Message relay</li>
-  </ul>
-
-  <p>Now it's time to move onto creating the server side code.  The code example below contains all the required functionality which we can break down in sequence. </p>
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">var</span> WebSocketServer = require(<span style="color: #aa5500">&quot;ws&quot;</span>).Server;
-  <span style="color: #0000aa">var</span> server = <span style="color: #0000aa">new</span> WebSocketServer({port: <span style="color: #009999">3000</span>});
-
-  <span style="color: #0000aa">var</span> userDb = [];
-
-  server.on(<span style="color: #aa5500">&quot;connection&quot;</span>, <span style="color: #0000aa">function</span>(obj){
-
-    <span style="color: #0000aa">var</span> user = {userName: <span style="color: #aa5500">&quot;&quot;</span>, userObj: obj};
-    userDb.push(user);
-
-    user.userObj.send(<span style="color: #aa5500">&quot;Please type in your username and press enter&quot;</span>) <span style="color: #aaaaaa; font-style: italic">// ask for a username</span>
-
-    user.userObj.on(<span style="color: #aa5500">&quot;message&quot;</span>, <span style="color: #0000aa">function</span>(message) {
-
-      <span style="color: #0000aa">if</span> (user.userName === <span style="color: #aa5500">&quot;&quot;</span>) {
-        user.userName = message.trim();
-      }
-
-      <span style="color: #0000aa">else</span> {
-
-        <span style="color: #0000aa">var</span> msg = message.trim(<span style="color: #aa5500">&quot;\n&quot;</span>);
-
-        userDb.forEach(<span style="color: #0000aa">function</span>(object) {
-          <span style="color: #0000aa">if</span> (object.userObj !== obj) {
-            object.userObj.send(user.userName + <span style="color: #aa5500">&quot;: &quot;</span> + msg); <span style="color: #aaaaaa; font-style: italic">// send msg with your username</span>
-          }
-        });
-      }
+      console.log(<span style="color: #aa5500">&quot;Connected to server.&quot;</span>);
+      ws.send(<span style="color: #aa5500">&quot;client connected!&quot;</span>);
     });
-
-    user.userObj.on(<span style="color: #aa5500">&quot;close&quot;</span>, <span style="color: #0000aa">function</span>() {
-      <span style="color: #0000aa">var</span> x = userDb.indexOf(user.userObj);
-      userDb.splice(x,<span style="color: #009999">1</span>);
-      user.userObj.close();
-    });
-  });
   </pre></div>
 
+  <h4>Handling Incoming Messages</h4>
+  <p>Our last event-handler will listen for messages being emitted from the server.</p>
 
+  <p>We do so by introducing ws.on("message").  This eventListener will also need to console.log data emitted from the server in order to see it in the console.</p>
 
-  <p>Creating a server first requires that we create an object that instantiates an instance of the WebSocket API server and configures it to listen on a specific port</p>
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic">//Loads the WebSocket API server object</span>
-  <span style="color: #0000aa">var</span> WebSocketServer = require(<span style="color: #aa5500">&quot;ws&quot;</span>).Server;
-  <span style="color: #aaaaaa; font-style: italic">//Instantiates an instance of the WebSocket server object</span>
-  <span style="color: #0000aa">var</span> server = <span style="color: #0000aa">new</span> WebSocketServer({port: <span style="color: #009999">3000</span>});
-  </pre></div>
+  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">ws.on(<span style="color: #aa5500">&quot;message&quot;</span>, <span style="color: #0000aa">function</span>(data)
+  {
+    console.log(data);
+  })
+</pre></div>
+<p></p>
+<a href="https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/client_3.js">Click here to download the full client.js file</a>
 
-  <h4>Client Connections</h4>
-  <p>The server object has a method called "on", that acts as an event listener and executes an anonymous function when a new "connection" is detected. It is exectued only the first time a new client connects.  The function requires a parameter that has been defined here as "obj" and represents the recently connected user.</p>
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">server.on(<span style="color: #aa5500">&quot;connection&quot;</span>, <span style="color: #0000aa">function</span>(obj){
-  </pre></div>
+<h3><a name="server" class="nostyle">Building the Server</a></h3>
 
-  <h4>Request user provide a username</h4>
-  <p>We then create an empty userDB array which will be used to keep track of all connections.  An new user variable is then created to add additional properties to the existing user obj which is then pushed into the userDB array.</p>
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">var</span> user = {userName: <span style="color: #aa5500">&quot;&quot;</span>,userObj: obj};
+<p>We will now be writing a server file using js to be able to communicate with the server.</p>
+
+<p>In order to manage client connects, we will need a few basic functonalities.</p>
+
+<ul>
+  <li>CLient connections</li>
+  <li>Request user provide a username</li>
+  <li>Message relay</li>
+</ul>
+
+<p>Now it's time to move onto creating the server side code.  The code example below contains all the required functionality which we can break down in sequence. </p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">var</span> WebSocketServer = require(<span style="color: #aa5500">&quot;ws&quot;</span>).Server;
+<span style="color: #0000aa">var</span> server = <span style="color: #0000aa">new</span> WebSocketServer({port: <span style="color: #009999">3000</span>});
+
+<span style="color: #0000aa">var</span> userDb = [];
+
+server.on(<span style="color: #aa5500">&quot;connection&quot;</span>, <span style="color: #0000aa">function</span>(obj){
+
+  <span style="color: #0000aa">var</span> user = {userName: <span style="color: #aa5500">&quot;&quot;</span>, userObj: obj};
   userDb.push(user);
-  </pre></div>
-  <h4>Message Relay</h4>
-  <p>The next thing we do is send a new message to the client and request that they type in a user name. An if\else statement is used to determine if thier response message contains actual text and if so is trimmed, added to thier userName property and a new message sent to all connected users.</p>
 
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  user.userObj.send(<span style="color: #aa5500">&quot;Please type in your username and press enter&quot;</span>) <span style="color: #aaaaaa; font-style: italic">// ask for a username</span>
+  user.userObj.send(<span style="color: #aa5500">&quot;Please type in your username and press enter&quot;</span>) <span style="color: #aaaaaa; font-style: italic">// ask for a username</span>
 
   user.userObj.on(<span style="color: #aa5500">&quot;message&quot;</span>, <span style="color: #0000aa">function</span>(message) {
 
@@ -284,55 +192,104 @@
       });
     }
   });
-  </pre></div>
-  <h4>Closing Connections</h4>
-  <p>Lastly we add some code to deal with "close" events which is triggered when a user disconnects from the server. The code below uses the splice methond on the userDB array to remove the client from the array</p>
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">   user.userObj.on(<span style="color: #aa5500">&quot;close&quot;</span>, <span style="color: #0000aa">function</span>() {
-  <span style="color: #0000aa">var</span> x = userDb.indexOf(user.userObj);
-  userDb.splice(x,<span style="color: #009999">1</span>);
-  user.userObj.close();
+
+  user.userObj.on(<span style="color: #aa5500">&quot;close&quot;</span>, <span style="color: #0000aa">function</span>() {
+    <span style="color: #0000aa">var</span> x = userDb.indexOf(user.userObj);
+    userDb.splice(x,<span style="color: #009999">1</span>);
+    user.userObj.close();
   });
-  </pre></div>
-  <p></p>
-  <a href="https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/server_6.js">Click here to download the full server.js file</a>
+});
+</pre></div>
 
-  <h1><a name="testing" class="nostyle">Testing your app locally</a></h1>
-  <p>
-    Now that you have created both a client.js file and a server.js, you can start communicating with other clients.
 
-    As an example of the chat app capabilities of integrating wscat in your website, now that you have both server and client
-    files, you can test locally.
 
-    We do so by running the server.js file on your terminal:
-  </p>
-  <img src="server.png">
-  <p>In a new terminal window type in the following command to run your client.</p>
-  <p>Open a second terminal window and open up another client.</p>
+<p>Creating a server first requires that we create an object that instantiates an instance of the WebSocket API server and configures it to listen on a specific port</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #aaaaaa; font-style: italic">//Loads the WebSocket API server object</span>
+<span style="color: #0000aa">var</span> WebSocketServer = require(<span style="color: #aa5500">&quot;ws&quot;</span>).Server;
+<span style="color: #aaaaaa; font-style: italic">//Instantiates an instance of the WebSocket server object</span>
+<span style="color: #0000aa">var</span> server = <span style="color: #0000aa">new</span> WebSocketServer({port: <span style="color: #009999">3000</span>});
+</pre></div>
 
-  <img src="client.png">
-  <p>Start chatting with your clients!
-  </p>
+<h4>Client Connections</h4>
+<p>The server object has a method called "on", that acts as an event listener and executes an anonymous function when a new "connection" is detected. It is exectued only the first time a new client connects.  The function requires a parameter that has been defined here as "obj" and represents the recently connected user.</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">server.on(<span style="color: #aa5500">&quot;connection&quot;</span>, <span style="color: #0000aa">function</span>(obj){
+</pre></div>
 
-  <h1><a name="git" class="nostyle">Creating a git repository for your work</a></h1>
-  <p>
-    In your github page, create a new repository by right hand-clicking "new repository" on the drop-down box next to your name.
-  </p>
-  <img src="github_1.png">
-  <p></p>
-  <p>Name your new repository and include a description.</p>
-  <img src="github_2.png">
-  <p></p>
-  <p>Click "Submit" and follow the instructions indicated on github to push up your repository to github.</p>
-  <p></p>
-  <p>Get into the habit of commiting your work to github.The first set of commands inititalizes your git
+<h4>Request user provide a username</h4>
+<p>We then create an empty userDB array which will be used to keep track of all connections.  An new user variable is then created to add additional properties to the existing user obj which is then pushed into the userDB array.</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000aa">var</span> user = {userName: <span style="color: #aa5500">&quot;&quot;</span>,userObj: obj};
+userDb.push(user);
+</pre></div>
+<h4>Message Relay</h4>
+<p>The next thing we do is send a new message to the client and request that they type in a user name. An if\else statement is used to determine if thier response message contains actual text and if so is trimmed, added to thier userName property and a new message sent to all connected users.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  user.userObj.send(<span style="color: #aa5500">&quot;Please type in your username and press enter&quot;</span>) <span style="color: #aaaaaa; font-style: italic">// ask for a username</span>
+
+user.userObj.on(<span style="color: #aa5500">&quot;message&quot;</span>, <span style="color: #0000aa">function</span>(message) {
+
+  <span style="color: #0000aa">if</span> (user.userName === <span style="color: #aa5500">&quot;&quot;</span>) {
+    user.userName = message.trim();
+  }
+
+  <span style="color: #0000aa">else</span> {
+
+    <span style="color: #0000aa">var</span> msg = message.trim(<span style="color: #aa5500">&quot;\n&quot;</span>);
+
+    userDb.forEach(<span style="color: #0000aa">function</span>(object) {
+      <span style="color: #0000aa">if</span> (object.userObj !== obj) {
+        object.userObj.send(user.userName + <span style="color: #aa5500">&quot;: &quot;</span> + msg); <span style="color: #aaaaaa; font-style: italic">// send msg with your username</span>
+      }
+    });
+  }
+});
+</pre></div>
+<h4>Closing Connections</h4>
+<p>Lastly we add some code to deal with "close" events which is triggered when a user disconnects from the server. The code below uses the splice methond on the userDB array to remove the client from the array</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">   user.userObj.on(<span style="color: #aa5500">&quot;close&quot;</span>, <span style="color: #0000aa">function</span>() {
+<span style="color: #0000aa">var</span> x = userDb.indexOf(user.userObj);
+userDb.splice(x,<span style="color: #009999">1</span>);
+user.userObj.close();
+});
+</pre></div>
+<p></p>
+<a href="https://github.com/gabrielaldana87/chat-app_tutorial/blob/master/server_6.js">Click here to download the full server.js file</a>
+
+<h1><a name="testing" class="nostyle">Testing your app locally</a></h1>
+<p>
+  Now that you have created both a client.js file and a server.js, you can start communicating with other clients.
+
+  As an example of the chat app capabilities of integrating wscat in your website, now that you have both server and client
+  files, you can test locally.
+
+  We do so by running the server.js file on your terminal:
+</p>
+<img src="server.png">
+<p>In a new terminal window type in the following command to run your client.</p>
+<p>Open a second terminal window and open up another client.</p>
+
+<img src="client.png">
+<p>Start chatting with your clients!
+</p>
+
+<h1><a name="git" class="nostyle">Creating a git repository for your work</a></h1>
+<p>
+  In your github page, create a new repository by right hand-clicking "new repository" on the drop-down box next to your name.
+</p>
+<img src="github_1.png">
+<p>Name your new repository and include a description.</p>
+<img src="github_2.png">
+<p></p>
+<p>Click "Submit" and follow the instructions indicated on github to push up your repository to github.</p>
+<p></p>
+<p>Get into the habit of commiting your work to github.The first set of commands inititalizes your git
   repository.</p>
   <p></p>
   <h4>The second set of commands pushes to github every time you want to commit changes:</h4>
   <p></p>
   <img src="gitub_3.png">
-   <h1><a name="digitalocean" class="nostyle">Digital Ocean</a></h1>
+  <h1><a name="digitalocean" class="nostyle">Digital Ocean</a></h1>
 
-   <p>
+  <p>
     Once all changes have been commited to the github repository the last and final step will be to connect to Digital Ocean and
     host the files using an http-server. If you don't already have one click <a href="https://cloud.digitalocean.com/registrations/new">here</a> to register for a new Digital Ocean acocunt.</p>
 
@@ -346,18 +303,18 @@
 
     <p>To connect to your server open a local command prompt and login using the following:</p>
     <ul>
-    <li>ssh root@[your-name].[your-url].nyc</li>
-    <li>enter in your password</li>
-      </ul>
+      <li>ssh root@[your-name].[your-url].nyc</li>
+      <li>enter in your password</li>
+    </ul>
   </p>
-   <p></p>
+  <p></p>
   <p>Clone your github repo using the following commands:</p>
   <ul>
     <li>git clone [your-github-repo-address]</li>
     <li>cd [your-repo-name]</li>
   </ul>
-      <p></p>
-      <p>Install and activate the http-server using npm by typing the following command:</p>
+  <p></p>
+  <p>Install and activate the http-server using npm by typing the following command:</p>
   <ul>
     <li>npm install -g http-server</li>
     <li>http-server</li>
@@ -369,63 +326,63 @@
 
 
 
-        </div>
-        <div class="col-md-1 column">
-        </div>
-      </div>
-      <!-- <div class="row clearfix">
-        <div class="col-md-12 column">
-          <div class="row clearfix">
-            <div class="col-md-1 column">
-            </div>
-            <div class="col-md-3 column">
-              <address> <strong>Twitter, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890</address>
-            </div>
-            <div class="col-md-4 column">
-              <blockquote>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-                </p> <small>Someone famous <cite>Source Title</cite></small>
-              </blockquote>
-            </div>
-            <div class="col-md-3 column">
-              <ul>
-                <li>
-                  Lorem ipsum dolor sit amet
-                </li>
-                <li>
-                  Consectetur adipiscing elit
-                </li>
-                <li>
-                  Integer molestie lorem at massa
-                </li>
-                <li>
-                  Facilisis in pretium nisl aliquet
-                </li>
-                <li>
-                  Nulla volutpat aliquam velit
-                </li>
-                <li>
-                  Faucibus porta lacus fringilla vel
-                </li>
-                <li>
-                  Aenean sit amet erat nunc
-                </li>
-                <li>
-                  Eget porttitor lorem
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-1 column">
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </div>
+</div>
+<div class="col-md-1 column">
+</div>
+</div>
+<!-- <div class="row clearfix">
+<div class="col-md-12 column">
+<div class="row clearfix">
+<div class="col-md-1 column">
+</div>
+<div class="col-md-3 column">
+<address> <strong>Twitter, Inc.</strong><br /> 795 Folsom Ave, Suite 600<br /> San Francisco, CA 94107<br /> <abbr title="Phone">P:</abbr> (123) 456-7890</address>
+</div>
+<div class="col-md-4 column">
+<blockquote>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+</p> <small>Someone famous <cite>Source Title</cite></small>
+</blockquote>
+</div>
+<div class="col-md-3 column">
+<ul>
+<li>
+Lorem ipsum dolor sit amet
+</li>
+<li>
+Consectetur adipiscing elit
+</li>
+<li>
+Integer molestie lorem at massa
+</li>
+<li>
+Facilisis in pretium nisl aliquet
+</li>
+<li>
+Nulla volutpat aliquam velit
+</li>
+<li>
+Faucibus porta lacus fringilla vel
+</li>
+<li>
+Aenean sit amet erat nunc
+</li>
+<li>
+Eget porttitor lorem
+</li>
+</ul>
+</div>
+<div class="col-md-1 column">
+</div>
+</div>
+</div>
+</div> -->
+</div>
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
-  </body>
+</body>
 
 </html>

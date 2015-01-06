@@ -14,4 +14,26 @@ a:hover.nostyle  {
 
 .jumbotron {
   padding: 20 60 60 20;
+  background-color: BCC1CF;
+}
+
+.jumbotron h1 {
+  font-size:40px
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.nav.navbar-nav a:hover {
+  color: red !important;
+  background-color: E4E7F0 !important;
 }
